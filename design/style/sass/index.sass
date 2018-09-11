@@ -1,21 +1,88 @@
+/* Variables */
 
-/* Creating a font style for the page named : ' Centry ' is from ==> ' ../Fonts/Centry-Gothic/GOTHIC.TTF ' */
+//Fonts
+$text-font-Roboto-Regular: "Roboto-Regular",arial, sans-serif
 
+//Colors
+$sct-1-leftGrid-color: #e9eae2
+$sct-1-rightGrid-color: #7acec3
+
+
+/* Creating a font style for the page named : ' Centry ' is from ==> ' ../Fonts/Roboto ' */
 @font-face
     font-family: "Roboto-Regular"
-    src: url("../design/fonts/roboto/Roboto-Regular.ttf")
-
-
+    src: url("../../fonts/roboto/Roboto-Regular.ttf")
+    
 *
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
     box-sizing: border-box
-    margin: 0
     padding: 0
+    margin: 0
     
 body 
     margin: 0
-    font-family: "AlJazeera-Regular"
+    font-family: $text-font-Roboto-Regular
     
 .clear
     content: ''
     display: table
     clear: both
+    
+.logo-size
+    width: 135px
+.right-sideImage-size
+    width: 25em
+    
+#sct-1
+    /*height: 55vh*/
+    max-height: 55vh
+    
+.leftSide-grid
+    float: left
+    width: 70%
+    height: 100%
+    overflow: hidden
+    background-color: $sct-1-leftGrid-color
+    
+.rightSide-grid
+    float: right
+    width: 30%
+    height: 100%
+    overflow: hidden
+    background-color: $sct-1-rightGrid-color    
+    
+.container-leftSide-1
+    width: 40em
+    /*height: 100px*/
+    margin: 0 auto
+    
+.left-side-use
+    float: left
+    margin-top: 30px
+
+.right-side-use
+    float: right
+    width: 60%
+    margin-top: 20px
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
