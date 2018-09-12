@@ -2,16 +2,50 @@
 
 //Fonts
 $text-font-Roboto-Regular: "Roboto-Regular",arial, sans-serif
+$text-font-Roboto-Condensed-Regular: "Roboto-Condensed-Regular",arial, sans-serif
+$text-font-Roboto-Light: "Roboto-Light",arial, sans-serif
 
 //Colors
 $sct-1-leftGrid-color: #e9eae2
 $sct-1-rightGrid-color: #7acec3
+$sct-2-leftGrid-color: #ebb240
+$sct-2-middleGrid-color: #fff
+$sct-2-rightGrid-color: #dfe0d9
+$btn-menu-main-color: #e9eae2
+$btn-list-sct2-hover: #333333
+
+*::selection 
+    
+    background-color: #7acec3
+    color: #fff
+
+*::-moz-selection 
+    
+    background-color: #7acec3
+    color: #fff
+
+img
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -webkit-user-drag: none
+    user-drag: none
+    -webkit-touch-callout: none
 
 
 /* Creating a font style for the page named : ' Centry ' is from ==> ' ../Fonts/Roboto ' */
 @font-face
     font-family: "Roboto-Regular"
     src: url("../../fonts/roboto/Roboto-Regular.ttf")
+
+@font-face
+    font-family: "Roboto-Condensed-Regular"
+    src: url("../../fonts/roboto/RobotoCondensed-Regular.ttf")
+
+@font-face
+    font-family: "Roboto-Light"
+    src: url("../../fonts/roboto/Roboto-Light.ttf")
     
 *
     -webkit-box-sizing: border-box
@@ -19,6 +53,9 @@ $sct-1-rightGrid-color: #7acec3
     box-sizing: border-box
     padding: 0
     margin: 0
+
+.active
+    color: $btn-list-sct2-hover
     
 body 
     margin: 0
@@ -33,29 +70,130 @@ body
     width: 135px
 .right-sideImage-size
     width: 25em
+.imageMiddle-size
+    width: 17em
+.imageRight-size
+    width: 14em    
     
 #sct-1
-    /*height: 55vh*/
-    max-height: 55vh
+    height: 25em
+    /*max-height: 55vh*/
     
-.leftSide-grid
+#sct-2
+    height: 30em
+    /*max-height: 55vh*/    
+    
+.leftSide-grid-sct1
     float: left
     width: 70%
     height: 100%
     overflow: hidden
     background-color: $sct-1-leftGrid-color
     
-.rightSide-grid
+.leftSide-grid-sct2
+    float: left
+    width: 30%
+    height: 100%
+    overflow: hidden
+    background-color: $sct-2-leftGrid-color
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        border-bottom: 1px solid #e9eae2
+        width: 158%
+        transform: rotateZ(-49.5deg)
+        left: -116px
+        /* transform-origin: -2% 0% */
+        bottom: 243px
+    
+.middleSide-grid-sct2
+    float: left
+    width: 40%
+    height: 100%
+    overflow: hidden
+    background-color: $sct-2-middleGrid-color
+    position: relative
+    
+.RightSide-grid-sct2
+    float: left
+    width: 30%
+    height: 70%
+    overflow: hidden
+    background-color: $sct-2-rightGrid-color
+    position: relative    
+    
+    
+.social-network
+    display: inline-block
+    position: relative
+    top: -4em
+    a
+        padding: 5px
+        font-size: 25px
+        color: $sct-1-rightGrid-color
+        text-decoration: none
+    
+.rightSide-grid-sct1
     float: right
     width: 30%
     height: 100%
     overflow: hidden
-    background-color: $sct-1-rightGrid-color    
+    background-color: $sct-1-rightGrid-color
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        border-bottom: 1px solid #e9eae2
+        width: 140%
+        transform: rotate(-44deg)
+        transform-origin: 0% 0%
+        bottom: 0     
     
 .container-leftSide-1
     width: 40em
-    /*height: 100px*/
+    height: 100%
     margin: 0 auto
+    
+.container-leftSide2
+    width: 20em
+    /* height: 100px */
+    margin: 0 auto
+    position: relative
+    top: 11em
+    left: 51px   
+    
+.container-rightSide-1
+    width: 20em
+    margin: 0 auto
+    text-align: center
+    
+.container-rightSide2
+    width: 20em
+    /* height: 100px */
+    margin: 0 auto
+    position: relative
+    top: 13em
+    /* right: 30px */
+    text-align: right
+    
+.container-middleSide2
+    width: 25em
+    /* height: 100px */
+    margin: 0 auto
+    position: relative
+    top: 25px
+    /* right: 30px */
+    text-align: left
+    
+.container-topSide2
+    width: 21em
+    /* height: 100px */
+    margin: 0 auto
+    position: relative
+    top: 3px
+    /* right: 30px */
+    text-align: left  
     
 .left-side-use
     float: left
@@ -66,16 +204,192 @@ body
     width: 60%
     margin-top: 20px
     
+.top-sideUse
+    .menu
+        padding: 35px 0
+        a
+            display: block
+            border: 2px solid #e9eae2
+            padding: 35px 0
+            width: 100px
+            margin: 0 auto
+            color: $btn-menu-main-color
+            outline: none
+            text-decoration: none
+            i
+                font-size: 30px
+            
+.bottom-sideUse
+    .desc
+        text-align: left
+        ul
+            list-style: none
+            li
+                color: $btn-menu-main-color
+                font-family: $text-font-Roboto-Condensed-Regular
+                font-size: 16px
+                line-height: 18px
+                cursor: default
+                
+.sideUse-sct2
+    .link
+        display: inline-block
+        text-align: left
+        ul
+            list-style: none
+            a
+                text-decoration: none
+                color: $btn-menu-main-color
+                &:hover
+                    color: $btn-list-sct2-hover
+            li
+                font-family: $text-font-Roboto-Condensed-Regular
+                font-size: 14px
+                line-height: 16px
+                text-transform: uppercase
+                font-weight: 500
     
+.titleUse-sct2
+    .title
+        span
+            display: block
+            font-family: $text-font-Roboto-Condensed-Regular
+            font-size: 3em
+            letter-spacing: 2px
+            font-weight: 500
+            color: $btn-menu-main-color
+            text-transform: uppercase
+            padding-top: 20px
+            cursor: default
+            
+.middleSideUse-sct2
+    .descMiddle
+        .title
+            span
+                display: block
+                font-family: $text-font-Roboto-Light
+                font-size: 25px
+                font-weight: 100
+                color: $btn-list-sct2-hover
+                text-transform: uppercase
+                padding: 20px 0
+                cursor: default
+        .listMiddle
+            ul
+                list-style: none
+                li
+                    line-height: 15px
+                    position: relative
+                    z-index: 10                 
+                    p
+                        display: inline-block
+                        color: $btn-list-sct2-hover
+                        font-family: $text-font-Roboto-Light
+                        font-size: 11px
+                        font-weight: 900
+                        cursor: default
+                        text-transform: uppercase
+                        padding-right: 5px
+                        &:after
+                            content: ":"
+                    span
+                        color: $btn-list-sct2-hover
+                        font-family: $text-font-Roboto-Light
+                        font-size: 13px
+                        font-weight: 500
+                        cursor: default
+                        text-transform: uppercase
+        .imageMiddle
+            position: absolute
+            top: -30px
+            right: -64px
+            
+        .linkSocialmiddle
+            position: relative
+            top: 4em
+            .link
+                color: $btn-list-sct2-hover
+                font-family: $text-font-Roboto-Light
+                font-size: 16px
+                text-transform: uppercase
+                font-weight: 500
+                a
+                    display: inline-block                    
+                    text-decoration: none
+                    color: $btn-list-sct2-hover
+            .social
+                position: relative
+                top: 5.5em
+                left: 3em
+                a
+                    text-decoration: none
+                    font-size: 20px
+                    color: $btn-list-sct2-hover
+                    padding: 10px
+                .counter
+                    position: relative
+                    left: -5px
+                    span
+                        color: red
+                        font-family: $text-font-Roboto-Light
+
     
-    
-    
-    
-    
-    
-    
-    
-    
+.rightSideUse-sct2
+    .descRight
+        .title
+            span
+                display: block
+                font-family: $text-font-Roboto-Light
+                font-size: 25px
+                font-weight: 100
+                color: $btn-list-sct2-hover
+                text-transform: uppercase
+                padding: 20px 0
+                cursor: default
+        .textRight
+            width: 13em
+            font-family: $text-font-Roboto-Light
+            font-size: 13px
+            position: relative
+            z-index: 10
+            line-height: 17px
+            p
+                text-transform: uppercase
+            span
+                font-weight: 600
+                text-transform: uppercase
+        .imageRight
+            position: absolute
+            top: 6em
+            right: -20px
+        .linkSocialright
+            position: relative
+            top: 20px            
+            .link
+                color: $btn-list-sct2-hover
+                font-family: $text-font-Roboto-Light
+                font-size: 16px
+                text-transform: uppercase
+                font-weight: 500
+                a
+                    display: inline-block                    
+                    text-decoration: none
+                    color: $btn-list-sct2-hover
+            .social
+                position: relative
+                top: 20px
+                left: 3em
+                a
+                    text-decoration: none
+                    font-size: 20px
+                    color: $btn-list-sct2-hover
+                    padding: 10px
+                .counter
+                    position: relative
+                    left: -5px
+                    span
+                        color: red
+                        font-family: $text-font-Roboto-Light    
     
     
     
