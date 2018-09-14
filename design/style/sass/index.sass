@@ -5,6 +5,8 @@
 $text-font-Roboto-Regular: "Roboto-Regular",arial, sans-serif
 $text-font-Roboto-Condensed-Regular: "Roboto-Condensed-Regular",arial, sans-serif
 $text-font-Roboto-Light: "Roboto-Light",arial, sans-serif
+$text-font-Roboto-italic-Light: "Roboto-italic-Light",arial, sans-serif
+$text-font-Roboto-Bold: "Roboto-Bold",arial, sans-serif
 
 //Colors
 $sct-1-leftGrid-color: #e9eae2
@@ -20,6 +22,7 @@ $counter-color: #fe7c7c
 
 $btn-menu-main-color: #e9eae2
 $btn-list-sct2-hover: #333333
+$color-carousel-active: #fd5000
 
 
 /* Variables */
@@ -56,6 +59,14 @@ img
 @font-face
     font-family: "Roboto-Light"
     src: url("../../fonts/roboto/Roboto-Light.ttf")
+
+@font-face
+    font-family: "Roboto-italic-Light"
+    src: url("../../fonts/roboto/RobotoCondensed-Italic.ttf")
+
+@font-face
+    font-family: "Roboto-Bold"
+    src: url("../../fonts/roboto/RobotoCondensed-Bold.ttf")
     
 *
     -webkit-box-sizing: border-box
@@ -64,7 +75,7 @@ img
     padding: 0
     margin: 0
 
-.active
+.actives
     color: $btn-list-sct2-hover
     
 body 
@@ -75,6 +86,9 @@ body
     content: ''
     display: table
     clear: both
+    
+a
+    text-decoration: none
     
 .logo-size
     width: 135px
@@ -92,6 +106,10 @@ body
     width: 30em
 .imageRight3-size
     width: 8em
+.imagetopSct4-size
+    width: 100%
+.image1-carousel-size
+    width: 100%
     
 #sct-1
     display: grid
@@ -108,12 +126,19 @@ body
 #sct-4
     display: grid
     grid-template-columns: 30% 70%
-    grid-template-rows: 30em    
+    grid-template-rows: 30em
+    
+#sct-5
+    display: grid
+    grid-template-columns: 100%    
     
 .leftSide-grid-sct1
     background-color: $sct-1-leftGrid-color
     position: relative
     grid-column: 1
+    display: flex
+    align-items: center
+    align-content: center    
     
 .leftSide-grid-sct2
     float: left
@@ -203,7 +228,10 @@ body
     overflow: hidden
     background-color: $sct-3-middleGrid-color
     position: relative
-    grid-column: 2    
+    grid-column: 2
+    display: flex
+    align-items: center
+    align-content: center   
     
 .social-network
     display: inline-block
@@ -226,7 +254,13 @@ body
         width: 140%
         transform: rotate(-45deg)
         transform-origin: 0% 0%
-        bottom: 0     
+        bottom: 0
+    
+.leftSide-grid-sct5
+    overflow: hidden
+    background-color: $sct-3-middleGrid-color
+    position: relative
+    padding: 3em 0
     
 .container-leftSide-1
     width: 40em
@@ -328,6 +362,21 @@ body
     right: -8em
     text-align: left
     
+.container-rightSide4
+    width: 45em
+    /* height: 100px */
+    margin: 0 auto
+    text-align: left
+    
+.container-Side5
+    width: 85%
+    /* height: 100px */
+    margin: 0 auto
+    text-align: left
+    overflow: hidden
+    display: grid
+    grid-template-columns: 30% 70%  
+    
 .left-side-use
     float: left
     margin-top: 30px
@@ -335,7 +384,7 @@ body
 .right-side-use
     float: right
     width: 60%
-    margin-top: 20px
+    margin-top: 20px  
     
 .top-sideUse
     .menu
@@ -898,7 +947,173 @@ body
             color: $btn-menu-main-color
             text-transform: uppercase
             padding-top: 20px
-            cursor: default    
+            cursor: default
+            
+.rightSideUse-sct4
+    .descLeft
+        float: left
+        width: 20em
+        line-height: 22px
+        color: $btn-list-sct2-hover
+        .para1
+            margin-bottom: 25px
+            font-family: $text-font-Roboto-italic-Light
+            font-size: 16px
+            font-weight: 700
+            p
+                &:first-child
+                    margin-bottom: 25px
+                
+        .para2
+            margin-bottom: 25px
+            font-family: $text-font-Roboto-Condensed-Regular
+            font-size: 16px
+            font-weight: 100
+            p
+                &:first-child
+                    margin-bottom: 25px
+            
+            
+.rightSideUse-sct4
+    .descRight
+        float: right
+        width: 20em
+        .topImage
+            width: 20em
+            margin-bottom: 20px            
+        .bottomList
+            .title
+                font-family: $text-font-Roboto-Bold
+                text-transform: uppercase
+                color: $btn-list-sct2-hover
+                border-bottom: 1px solid #bfc0b9
+                padding-bottom: 5px
+            .list
+                ul
+                    list-style: none
+                    display: inline-block
+                    line-height: 20px
+                    &:first-child                    
+                        margin-right: 3em
+                    li
+                        font-family: $text-font-Roboto-Condensed-Regular
+                        font-size: 16px
+                        text-transform: capitalize
+
+.sideUseRight-sct5
+    grid-column: 2
     
+.sideUseLeft-sct5
+    grid-column: 1
+    .title
+        font-family: $text-font-Roboto-Condensed-Regular
+        font-size: 25px
+        text-transform: uppercase
+        color: $btn-list-sct2-hover
+        padding-bottom: 20px
+    .desc
+        font-family: $text-font-Roboto-Light
+        font-size: 16px
+        line-height: 22px
+        color: $btn-list-sct2-hover
+        .para1
+            margin-bottom: 25px
+            font-size: 16px
+            p
+                &:first-child
+                    margin-bottom: 25px      
     
-    
+            
+.owl-theme
+    .owl-dots
+        .owl-dot
+            outline: none
+            span
+                background-color: transparent
+                border: 2px solid $color-carousel-active
+                
+.owl-theme
+    .owl-dots
+        .owl-dot
+            outline: none
+            &:hover
+                span
+                    background-color: $color-carousel-active !important              
+        .active
+            span
+                background-color: $color-carousel-active !important
+                
+.owl-dots
+    margin-top: 2em !important
+            
+.item            
+    .carousel-section-work
+        .carousel-work-image
+            background-position: center
+            background-color: #fff
+            overflow: hidden
+            width: 100%
+            text-align: center
+            height: 8em
+            display: flex
+            align-items: center
+            justify-content: center
+        .carousel-work-desc
+            padding-top: 25px
+            line-height: 18px
+            p
+                text-transform: uppercase
+                font-size: 16px
+                &:first-child
+                    font-family: $text-font-Roboto-Bold
+                &:last-child
+                    font-family: $text-font-Roboto-Condensed-Regular
+                
+        .carousel-work-social
+            .left-social
+                float: left
+                display: inline-block
+                position: relative
+                a
+                    display: block
+                    text-decoration: none
+                    font-family: $text-font-Roboto-Light
+                    color: $color-carousel-active
+                    font-size: 25px
+                    &:hover
+                        &:after
+                            opacity: 1
+                            color: $sct-2-leftGrid-color
+
+                    &:after
+                        content: '<'
+                        position: absolute
+                        right: -20px
+                        top: 0
+                        opacity: 0
+                
+            .right-social
+                float: right
+                display: inline-block
+                position: relative
+                top: 10px
+                a
+                    text-decoration: none
+                    color: $color-carousel-active
+                    font-size: 18px
+                    padding: 0 10px
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+            
