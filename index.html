@@ -68,21 +68,34 @@
             </div>
                             
         </div>
-        
+                    
         <div class="rightSide-grid-sct1">
             <!-- starting the right grid layout -->
                 
+                                        
             <div class="container-rightSide-1">
             
                 <div class="top-sideUse">
                     
-                    <div class="menu">
+                    <div id="burgerMenu" class="menuNav">
+
+                        <div class="itemMenu">
+
+                            <ul>
+                                <a href="#"><li>home</li></a><a href="#"><li>project</li></a><a href="#"><li>studio</li></a><a href="#"><li>news</li></a><a href="#"><li>contact</li></a>
+                            </ul>
+
+                        </div>
+
+                    </div>                    
+                    
+                    <div id="changeBack" onclick="displayFunction()" class="menuBar">
                         
-                        <a href="#">
-                            
-                            <i class="fas fa-bars"></i>
-                            
-                        </a>
+                        <div class="humburger">
+                          <span class="l1"></span>
+                          <span class="l2"></span>
+                          <span class="l3"></span>
+                        </div>                        
                         
                     </div>
                     
@@ -126,8 +139,6 @@
                
             <div class="container-leftSide2">
 
-                    <div class="container-rightSide-2">
-
                         <div class="sideUse-sct2">
 
                             <div class="link">
@@ -142,28 +153,22 @@
 
                             </div>
 
-                        </div>                
-
-                    </div>
-
-            </div>
-              
-            <div class="container-rightSide2">
-                
-                <div class="titleUse-sct2">
-                    
-                    <div class="title">
+                        </div>
                         
-                        <span>
-                            
-                            projects
-                            
-                        </span>
-                        
-                    </div>
-                    
-                </div>
-                
+                        <div class="titleUse-sct2">
+
+                            <div class="title">
+
+                                <span>
+
+                                    projects
+
+                                </span>
+
+                            </div>
+
+                        </div>                        
+
             </div>
               
         </div>
@@ -199,12 +204,6 @@
                            
                        </div>
                        
-                       <div class="imageMiddle">
-                           
-                           <img class="imageMiddle-size" src="../ChallengeCode/design/images/sct-2-middle-image.png" alt="">
-                           
-                       </div>
-                       
                        <div class="linkSocialmiddle">
                            
                            <div class="link">
@@ -236,7 +235,15 @@
                    
                     </div>
                     
+                    <div class="imageMiddle">
+                           
+                        <img class="imageMiddle-size" src="../ChallengeCode/design/images/sct-2-middle-image.png" alt="">
+                           
+                    </div>                    
+                    
                 </div>
+                
+                <div class="clear"></div>
                 
             </div>                
                 
@@ -265,12 +272,6 @@
                            
                             <p><span>for</span> stelton</p>
                             potter focuses on the functionality and process of preparing tea. a big sieve allows the flavor of to evenly brewed.
-                           
-                       </div>
-                       
-                       <div class="imageRight">
-                           
-                           <img class="imageRight-size" src="../ChallengeCode/design/images/sct-2-right-image.png" alt="">
                            
                        </div>
                        
@@ -304,9 +305,17 @@
                        </div>
                    
                     </div>
+                    
+                    <div class="imageRight">
+                           
+                        <img class="imageRight-size" src="../ChallengeCode/design/images/sct-2-right-image.png" alt="">
+                           
+                    </div>                    
 
                 </div>                
 
+               <div class="clear"></div>
+           
             </div>
               
         </div>
@@ -329,11 +338,7 @@
                     </div>
                        
                 </div>
-                      
-            </div>
-                      
-            <div class="container-bottomSide2">                      
-                      
+                     
                        <div class="descBottom">
                                                             
                                 <div class="listBottom">
@@ -376,7 +381,8 @@
 
                             </div>
                        
-                       </div>
+                       </div>                     
+                      
             </div>
             
         </div>
@@ -757,6 +763,11 @@
         
     </section>
     
+   <!--
+   
+       #sct-5 / section5 == holding content5
+   
+   -->     
     
     <section id="sct-5">
         
@@ -1162,46 +1173,286 @@
         
         </div>
         
-    </section>                
+    </section>
     
+   <!--
+   
+       #sct-6 / section6 == holding content6
+   
+   -->     
+    
+    
+    <section id="sct-6">
+        
+        <div class="leftSide-grid-sct6">
+            
+            <div class="container-leftSide6">
+                
+                <div class="leftSideUse-sct6">
+                    
+                    <div class="sideUse-sct6">
+                    
+                        <div id="map"></div>                        
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="rightSide-grid-sct6">
+            
+            <div class="container-rightSide6">
+                
+                <div class="rightSideUse-sct6">
+                    
+                    <div class="sideUse-sct6">
+                    
+                        
+                    
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+        
+        
+    </section>
     
     <!-- Required JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="core/javascript/owl.carousel.min.js"></script>    
     <script src="core/javascript/index.js"></script>
-       
+
+        
     <script>
-    
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:20,
-            autoplay:false,
-            autoplayTimeout:3000,
-            autoplayHoverPause:true,
-            lazyLoad: true,
-            responsiveClass:true,
-            navText: [
-                "<i class='fa fa-arrow-left'></i>",
-                "<i class='fa fa-arrow-right'></i>"
-            ],           
-            responsive:{
-                0:{
-                    items:1,
-                    nav:false
-                },
-                600:{
-                    items:2,
-                    nav:false
-                },
-                1000:{
-                    items:3,
-                    nav:false,
-                    loop:true
-                }
-            }
-        });        
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 31.669746, lng: -7.973328},
+          zoom: 12,
+          styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#f8eff5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e6e8e6"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e0e0e0"
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e9e9e9"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#bfbfbf"
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#c0c0c0"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]
+        });          
+          
+      }
         
+        window.onresize = function() {
+            var currCenter = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+            map.setCenter(currCenter);
+        };          
     </script>
-        
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXo6FjIAd4_K_fKtydhoUlFlflVnB55-s&callback=initMap"></script>
+    
 </body>

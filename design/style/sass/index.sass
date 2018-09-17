@@ -95,20 +95,16 @@ a
 .right-sideImage-size
     width: 25em
 .imageMiddle-size
-    width: 17em
-.imageRight-size
+    width: 16em
+.imageRight-size , .imageLeftSct3-size
     width: 14em
 .imagebottom-size
     width: 15em
-.imageLeftSct3-size
-    width: 14em
 .imageMiddleSct3-size
-    width: 30em
+    width: 25em
 .imageRight3-size
     width: 8em
-.imagetopSct4-size
-    width: 100%
-.image1-carousel-size
+.imagetopSct4-size , .image1-carousel-size
     width: 100%
     
 #sct-1
@@ -126,11 +122,16 @@ a
 #sct-4
     display: grid
     grid-template-columns: 30% 70%
-    grid-template-rows: 30em
     
 #sct-5
     display: grid
-    grid-template-columns: 100%    
+    grid-template-columns: 100%
+    
+#sct-6
+    background-color: $sct-3-middleGrid-color    
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 30em    
     
 .leftSide-grid-sct1
     background-color: $sct-1-leftGrid-color
@@ -170,7 +171,12 @@ a
         transform: rotateZ(-49.5deg)
         left: -116px
         /* transform-origin: -2% 0% */
-        bottom: 243px    
+        bottom: 243px
+    
+.leftSide-grid-sct6
+    overflow: hidden
+    position: relative
+    grid-column: 1    
     
 .middleSide-grid-sct2
     float: left
@@ -183,7 +189,6 @@ a
 .RightSide-grid-sct2
     float: left
     width: 30%
-    height: 70%
     overflow: hidden
     background-color: $sct-2-rightGrid-color
     position: relative 
@@ -199,8 +204,8 @@ a
     
 .leftSide-grid-sct3
     float: left
-    width: 20%
     height: 100%
+    width: 20%
     overflow: hidden
     background-color: $sct-3-leftGrid-color
     position: relative
@@ -269,25 +274,15 @@ a
     
 .container-leftSide2
     width: 20em
-    /* height: 100px */
     margin: 0 auto
-    position: relative
-    top: 11em
-    left: 51px   
+    margin-top: 195px
+    margin-bottom: 195px 
     
 .container-rightSide-1
     width: 20em
     margin: 0 auto
+    padding: 7em 0
     text-align: center
-    
-.container-rightSide2
-    width: 20em
-    /* height: 100px */
-    margin: 0 auto
-    position: relative
-    top: 13em
-    /* right: 30px */
-    text-align: right
     
 .container-leftSide4
     width: 20em
@@ -299,47 +294,32 @@ a
     text-align: right    
     
 .container-middleSide2
-    width: 25em
+    width: 33em
     /* height: 100px */
     margin: 0 auto
-    position: relative
-    top: 25px
-    /* right: 30px */
+    overflow: hidden
     text-align: left
     
 .container-topSide2
-    width: 21em
+    width: 25em
     /* height: 100px */
     margin: 0 auto
-    position: relative
-    top: 3px
-    /* right: 30px */
     text-align: left
+    margin-top: 2em
+    margin-bottom: 2em    
 
 .container-bottomSide2-image
     width: 15em
-    /* height: 100px */
-    margin: 0 auto
-    position: relative
-    top: 2em
-    /* right: 30px */
+    margin: 0 auto    
+    margin-top: 40px
+    margin-bottom: 40px
     text-align: left 
-    
-.container-bottomSide2
-    width: 20em
-    /* height: 100px */
-    margin: 0 auto
-    position: relative
-    top: 4em
-    /* right: 30px */
-    text-align: left
     
 .container-leftSide3
     width: 12em
     /* height: 100px */
     margin: 0 auto
-    position: relative
-    top: 15px
+    margin-top: 15px
     /* right: 30px */
     text-align: left
     
@@ -347,9 +327,9 @@ a
     width: 23em
     /* height: 100px */
     margin: 0 auto
-    position: relative
-    top: 6em
-    left: 130px
+    //position: relative
+    //top: 6em
+    //left: 130px
     /* right: 30px */
     text-align: left
     z-index: 12
@@ -364,7 +344,7 @@ a
     
 .container-rightSide4
     width: 45em
-    /* height: 100px */
+    padding: 4em 0
     margin: 0 auto
     text-align: left
     
@@ -386,22 +366,86 @@ a
     width: 60%
     margin-top: 20px  
     
+.menuNav
+    visibility: hidden
+    position: absolute
+    top: 0
+    z-index: 1
+    right: 13em
+    background-color: #ebb240
+    width: 40em
+    opacity: 0
+    transition: all .2s ease-out     
+    
+    .itemMenu
+        ul
+            overflow: hidden
+            list-style: none
+            a
+                display: inline-block
+                text-decoration: none
+                li
+                    padding: 36.5px
+                    color: $btn-menu-main-color
+                    font-family: $text-font-Roboto-Condensed-Regular
+                    text-transform: uppercase
+    
+.toggleStyle
+    opacity: 1
+    width: 45em
+    transition: all .2s ease-out     
+    visibility: visible
+    
+.changeBack
+    background-color: $sct-2-leftGrid-color
+    border: 2px solid $sct-2-leftGrid-color !important
+           
+                    
 .top-sideUse
-    .menu
-        padding: 35px 0
-        a
-            display: block
-            border: 2px solid #e9eae2
-            padding: 35px 0
-            width: 100px
+    position: relative
+    top: -4em
+    .menuBar
+        display: inline-block
+        border: 2px solid #e9eae2
+        width: 100px
+        margin: 0 auto
+        color: $btn-menu-main-color
+        outline: none
+        text-decoration: none
+        .humburger 
+            padding: 45px
+            position: relative
+            width: 4em
             margin: 0 auto
-            color: $btn-menu-main-color
-            outline: none
-            text-decoration: none
-            i
-                font-size: 30px
-            
+            cursor: pointer
+        .l1, .l2, .l3 
+            position: absolute
+            display: block
+            margin: auto
+            top: 48%
+            left: 25%
+            height: 3px
+            width: 50%
+            background-color: $btn-menu-main-color
+            transition: all .2s ease-out
+            border-radius: 8px
+            &:first-child
+                top: 40%
+            &:last-child
+                top: 55%
+        .activate
+            .l1
+                transform: rotate(45deg)
+                top: 48%
+            .l2
+                opacity: 0
+            .l3
+                transform: rotate(-45deg)
+                top: 48%                        
 .bottom-sideUse
+    position: relative
+    top: -2em
+    
     .desc
         text-align: left
         ul
@@ -409,11 +453,15 @@ a
             li
                 color: $btn-menu-main-color
                 font-family: $text-font-Roboto-Condensed-Regular
-                font-size: 16px
-                line-height: 18px
-                cursor: default
+                font-size: 15px
+                line-height: 15px
+                cursor: default         
                 
 .sideUse-sct2
+    display: inline-block
+    position: relative
+    top: -2em
+    left: 4em    
     .link
         display: inline-block
         text-align: left
@@ -442,6 +490,10 @@ a
                 font-weight: 500
     
 .titleUse-sct2
+    display: inline-block
+    position: relative
+    top: 4em
+    left: 3em
     .title
         span
             display: block
@@ -456,6 +508,9 @@ a
             
 .middleSideUse-sct2
     .descMiddle
+        float: left
+        position: relative
+        left: 5em
         .title
             span
                 display: block
@@ -491,14 +546,9 @@ a
                         font-weight: 500
                         cursor: default
                         text-transform: uppercase
-        .imageMiddle
-            position: absolute
-            top: -30px
-            right: -64px
             
         .linkSocialmiddle
-            position: relative
-            top: 4em
+            margin-top: 5em
             .link
                 color: $btn-list-sct2-hover
                 font-family: $text-font-Roboto-Light
@@ -521,9 +571,8 @@ a
                         top: -2px
                         opacity: 0
             .social
-                position: relative
-                top: 5.5em
-                left: 3em
+                margin-top: 5em
+                margin-left: 2em
                 a
                     text-decoration: none
                     font-size: 20px
@@ -535,10 +584,14 @@ a
                     span
                         color: red
                         font-family: $text-font-Roboto-Light
-
+    .imageMiddle
+        float: right
     
 .rightSideUse-sct2
     .descRight
+        float: left
+        position: relative
+        left: 2em
         .title
             span
                 display: block
@@ -547,7 +600,7 @@ a
                 font-weight: 100
                 color: $btn-list-sct2-hover
                 text-transform: uppercase
-                padding: 20px 0
+                padding: 0 0 20px 0
                 cursor: default
         .textRight
             width: 13em
@@ -561,13 +614,8 @@ a
             span
                 font-weight: 600
                 text-transform: uppercase
-        .imageRight
-            position: absolute
-            top: 6em
-            right: -20px
         .linkSocialright
-            position: relative
-            top: 20px            
+            margin-top: 25px
             .link
                 color: $btn-list-sct2-hover
                 font-family: $text-font-Roboto-Light
@@ -590,9 +638,7 @@ a
                         top: -2px
                         opacity: 0                    
             .social
-                position: relative
-                top: 20px
-                left: 3em
+                margin-left: 2em
                 a
                     text-decoration: none
                     font-size: 20px
@@ -603,7 +649,12 @@ a
                     left: -5px
                     span
                         color: red
-                        font-family: $text-font-Roboto-Light    
+                        font-family: $text-font-Roboto-Light
+                        
+    .imageRight
+        float: right
+        position: relative
+        top: 3em
     
 .descBottom
     .listBottom
@@ -755,15 +806,19 @@ a
                     
 .leftSideUse-sct3                    
     .descLeft-image
-        position: absolute
-        top: 15em
-        right: -30px
+        position: relative
+        top: 15px
 
 .middleSideUse-sct3
-    .imageMiddle-sct3
-        position: absolute
-        top: 4em
-        right: 6em
+    .descMiddle
+        position: relative
+        top: 5em
+        left: 5em
+    .descMiddle-image
+        .imageMiddle-sct3
+            position: relative
+            top: 0
+            right: 5em
         
 .rightSideUse-sct3        
     .imageRight3
@@ -1103,12 +1158,8 @@ a
                     font-size: 18px
                     padding: 0 10px
                 
-                
-                
-                
-                
-                
-                
+#map
+    position: static !important
                 
                 
                 
