@@ -40,6 +40,7 @@ img {
   padding: 0;
   margin: 0; }
 
+/* active link */
 .actives {
   color: #333333; }
 
@@ -47,6 +48,7 @@ body {
   margin: 0;
   font-family: "Roboto-Regular", arial, sans-serif; }
 
+/* clear the float */
 .clear {
   content: "";
   display: table;
@@ -55,6 +57,7 @@ body {
 a {
   text-decoration: none; }
 
+/* image sizes */
 .logo-size {
   width: 135px; }
 
@@ -79,6 +82,7 @@ a {
 .imagetopSct4-size, .image1-carousel-size {
   width: 100%; }
 
+/* section */
 #sct-1 {
   display: grid;
   grid-template-columns: 70% 30%; }
@@ -102,8 +106,7 @@ a {
 #sct-6 {
   background-color: #eaeaea;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30em; }
+  grid-template-columns: 50% 50%; }
 
 .leftSide-grid-sct1 {
   background-color: #e9eae2;
@@ -148,7 +151,8 @@ a {
 .leftSide-grid-sct6 {
   overflow: hidden;
   position: relative;
-  grid-column: 1; }
+  grid-column: 1;
+  height: 100vh; }
 
 .middleSide-grid-sct2 {
   float: left;
@@ -1285,7 +1289,10 @@ a {
     left: 14em; }
 
   .titleUse-sct2 {
-    left: 2em; } }
+    left: 2em; }
+
+  #sct-6 {
+    display: block; } }
 @media screen and (max-width: 370px) {
   .middleSideUse-sct2 .imageMiddle {
     position: relative;

@@ -48,6 +48,7 @@ img
 
 
 /* Creating a font style for the page named : ' Centry ' is from ==> ' ../Fonts/Roboto ' */
+
 @font-face
     font-family: "Roboto-Regular"
     src: url("../../fonts/roboto/Roboto-Regular.ttf")
@@ -75,6 +76,7 @@ img
     padding: 0
     margin: 0
 
+/* active link */
 .actives
     color: $btn-list-sct2-hover
     
@@ -82,6 +84,7 @@ body
     margin: 0
     font-family: $text-font-Roboto-Regular
     
+/* clear the float */
 .clear
     content: ''
     display: table
@@ -89,7 +92,9 @@ body
     
 a
     text-decoration: none
-    
+
+/* image sizes */
+
 .logo-size
     width: 135px
 .right-sideImage-size
@@ -106,7 +111,9 @@ a
     width: 8em
 .imagetopSct4-size , .image1-carousel-size
     width: 100%
-    
+
+/* section */
+
 #sct-1
     display: grid
     grid-template-columns: 70% 30%
@@ -131,8 +138,7 @@ a
     background-color: $sct-3-middleGrid-color    
     display: grid
     grid-template-columns: 50% 50%
-    grid-template-rows: 30em    
-    
+
 .leftSide-grid-sct1
     background-color: $sct-1-leftGrid-color
     position: relative
@@ -176,7 +182,8 @@ a
 .leftSide-grid-sct6
     overflow: hidden
     position: relative
-    grid-column: 1    
+    grid-column: 1
+    height: 100vh
     
 .middleSide-grid-sct2
     float: left
@@ -1187,12 +1194,11 @@ a
                     cursor: default             
     .rightSide-logo
         float: right
-        width: 10em    
+        width: 10em
+        
+        
                 
 /*   Starting media Queries : Responsive Design */
-
-
-
 
 @media screen and (max-width: 1024px)
     .right-sideImage-size
@@ -1389,6 +1395,8 @@ a
         left: 2em
         
         
+    #sct-6
+        display: block
         
         
 @media screen and (max-width: 370px)
