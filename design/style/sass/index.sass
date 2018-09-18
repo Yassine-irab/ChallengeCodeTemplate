@@ -1,28 +1,27 @@
 /* Variables */
 
-
 //Fonts
-$text-font-Roboto-Regular: "Roboto-Regular",arial, sans-serif
+$text-font-Roboto-Regular          : "Roboto-Regular",arial, sans-serif
 $text-font-Roboto-Condensed-Regular: "Roboto-Condensed-Regular",arial, sans-serif
-$text-font-Roboto-Light: "Roboto-Light",arial, sans-serif
-$text-font-Roboto-italic-Light: "Roboto-italic-Light",arial, sans-serif
-$text-font-Roboto-Bold: "Roboto-Bold",arial, sans-serif
+$text-font-Roboto-Light            : "Roboto-Light",arial, sans-serif
+$text-font-Roboto-italic-Light     : "Roboto-italic-Light",arial, sans-serif
+$text-font-Roboto-Bold             : "Roboto-Bold",arial, sans-serif
 
 //Colors
-$sct-1-leftGrid-color: #e9eae2
-$sct-1-rightGrid-color: #7acec3
-$sct-2-leftGrid-color: #ebb240
+$sct-1-leftGrid-color  : #e9eae2
+$sct-1-rightGrid-color : #7acec3
+$sct-2-leftGrid-color  : #ebb240
 $sct-2-middleGrid-color: #fff
-$sct-2-rightGrid-color: #dfe0d9
+$sct-2-rightGrid-color : #dfe0d9
 $sct-2-bottomGrid-color: #f7f7f3
-$sct-3-leftGrid-color: #6e7d8a
+$sct-3-leftGrid-color  : #6e7d8a
 $sct-3-middleGrid-color: #eaeaea
-$sct-4-leftGrid-color: #ff9b6d
-$counter-color: #fe7c7c
+$sct-4-leftGrid-color  : #ff9b6d
+$counter-color         : #fe7c7c
 
-$btn-menu-main-color: #e9eae2
-$btn-list-sct2-hover: #333333
-$color-carousel-active: #fd5000
+$btn-menu-main-color   : #e9eae2
+$btn-list-sct2-hover   : #333333
+$color-carousel-active : #fd5000
 
 
 /* Variables */
@@ -30,20 +29,20 @@ $color-carousel-active: #fd5000
 *::selection 
     
     background-color: #7acec3
-    color: #fff
+    color           : #fff
 
 *::-moz-selection 
     
     background-color: #7acec3
-    color: #fff
+    color           : #fff
 
 img
-    -moz-user-select: none
-    -webkit-user-select: none
-    -ms-user-select: none
-    user-select: none
-    -webkit-user-drag: none
-    user-drag: none
+    -moz-user-select     : none
+    -webkit-user-select  : none
+    -ms-user-select      : none
+    user-select          : none
+    -webkit-user-drag    : none
+    user-drag            : none
     -webkit-touch-callout: none
 
 
@@ -70,11 +69,11 @@ img
     src: url("../../fonts/roboto/RobotoCondensed-Bold.ttf")
     
 *
+    padding           : 0
+    margin            : 0
     -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
-    box-sizing: border-box
-    padding: 0
-    margin: 0
+    -moz-box-sizing   : border-box
+    box-sizing        : border-box
 
 /* active link */
 .actives
@@ -88,7 +87,7 @@ body
 .clear
     content: ''
     display: table
-    clear: both
+    clear  : both
     
 a
     text-decoration: none
@@ -115,7 +114,7 @@ a
 /* section */
 
 #sct-1
-    display: grid
+    display              : grid
     grid-template-columns: 70% 30%
     
 #sct-2
@@ -123,326 +122,343 @@ a
     /*max-height: 55vh*/
     
 #sct-3
-    height: 35em
+    height  : 35em
     position: relative
     
 #sct-4
-    display: grid
+    display              : grid
     grid-template-columns: 30% 70%
     
 #sct-5
-    display: grid
+    display              : grid
     grid-template-columns: 100%
     
 #sct-6
-    background-color: $sct-3-middleGrid-color    
-    display: grid
+    display              : grid
     grid-template-columns: 50% 50%
+    background-color     : $sct-3-middleGrid-color    
+    
+    
+/* width and height of content  ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
 
 .leftSide-grid-sct1
+    display         : flex
+    align-items     : center
+    align-content   : center    
+    position        : relative
+    grid-column     : 1
     background-color: $sct-1-leftGrid-color
-    position: relative
-    grid-column: 1
-    display: flex
-    align-items: center
-    align-content: center    
     
 .leftSide-grid-sct2
-    float: left
-    width: 30%
-    height: 100%
-    overflow: hidden
+    width           : 30%
+    height          : 100%
+    float           : left
+    position        : relative
+    overflow        : hidden
     background-color: $sct-2-leftGrid-color
-    position: relative
     &:before
-        content: ""
-        position: absolute
+        content      : ""
+        width        : 158%
+        position     : absolute
+        left         : -116px
+        bottom       : 243px
         border-bottom: 1px solid #e9eae2
-        width: 158%
-        transform: rotateZ(-49.5deg)
-        left: -116px
+        transform    : rotateZ(-49.5deg)
         /* transform-origin: -2% 0% */
-        bottom: 243px
     
 .leftSide-grid-sct4
-    overflow: hidden
+    position        : relative
+    grid-column     : 1
+    overflow        : hidden
     background-color: $sct-4-leftGrid-color
-    position: relative
-    grid-column: 1
     &:before
-        content: ""
-        position: absolute
+        content      : ""
+        width        : 158%
+        position     : absolute
+        left         : -116px
+        bottom       : 243px
         border-bottom: 1px solid #e9eae2
-        width: 158%
-        transform: rotateZ(-49.5deg)
-        left: -116px
+        transform    : rotateZ(-49.5deg)
         /* transform-origin: -2% 0% */
-        bottom: 243px
     
 .leftSide-grid-sct6
-    overflow: hidden
-    position: relative
+    height     : 100vh
+    position   : relative
     grid-column: 1
-    height: 100vh
+    overflow   : hidden
     
 .middleSide-grid-sct2
-    float: left
-    width: 40%
-    height: 100%
-    overflow: hidden
+    width           : 40%
+    height          : 100%
+    position        : relative
+    float           : left
+    overflow        : hidden
     background-color: $sct-2-middleGrid-color
-    position: relative
     
 .RightSide-grid-sct2
-    float: left
-    width: 30%
-    overflow: hidden
+    width           : 30%
+    position        : relative 
+    float           : left
+    overflow        : hidden
     background-color: $sct-2-rightGrid-color
-    position: relative 
     
 .BottomSide-grid-sct2
-    /*float: left*/
-    width: 30%
-    height: 100%
-    overflow: hidden
+    width           : 30%
+    height          : 100%
+    position        : relative
+    overflow        : hidden
+    z-index         : 10
     background-color: $sct-2-bottomGrid-color
-    position: relative
-    z-index: 10
     
 .leftSide-grid-sct3
-    float: left
-    height: 100%
-    width: 20%
-    overflow: hidden
+    width           : 20%
+    height          : 100%
+    position        : relative
+    float           : left
+    overflow        : hidden
+    border          : 1px slid
     background-color: $sct-3-leftGrid-color
-    position: relative
-    border: 1px slid
     
 .middleSide-grid-sct3
-    float: left
-    width: 50%
-    height: 100%
-    overflow: hidden
+    width           : 50%
+    height          : 100%
+    position        : relative
+    float           : left
+    overflow        : hidden
     background-color: $sct-3-middleGrid-color
-    position: relative
     
 .rightSide-grid-sct3
-    width: 30%
-    overflow: hidden
+    width           : 30%
+    display         : block
+    right           : 0
+    bottom          : 0
+    position        : absolute
+    overflow        : hidden
     background-color: $sct-2-middleGrid-color
-    position: absolute
-    display: block
-    right: 0
-    bottom: 0
     
 .rightSide-grid-sct4
-    overflow: hidden
+    display         : flex
+    align-items     : center
+    align-content   : center   
+    grid-column     : 2
+    position        : relative
+    overflow        : hidden
     background-color: $sct-3-middleGrid-color
-    position: relative
-    grid-column: 2
-    display: flex
-    align-items: center
-    align-content: center   
     
 .social-network
-    display: inline-block
+    display : inline-block
     position: relative
-    top: -4em
+    top     : -4em
     a
-        padding: 5px
-        font-size: 25px
-        color: $sct-1-rightGrid-color
+        font-size      : 25px
+        padding        : 5px
         text-decoration: none
+        color          : $sct-1-rightGrid-color
     
 .rightSide-grid-sct1
+    position        : relative
+    grid-column     : 2 
     background-color: $sct-1-rightGrid-color
-    position: relative
-    grid-column: 2 
     &:before
-        content: ""
-        position: absolute
-        border-bottom: 1px solid #e9eae2
-        width: 140%
-        transform: rotate(-45deg)
+        content         : ""
+        width           : 140%
+        position        : absolute
+        bottom          : 0
         transform-origin: 0% 0%
-        bottom: 0
+        transform       : rotate(-45deg)
+        border-bottom   : 1px solid #e9eae2
     
 .rightSide-grid-sct6
-    overflow: hidden
-    padding: 5em
-    grid-column: 2
-    display: flex
+    display           : flex
     -o--webkit-display: flex
-    -ms-display: flex
-    -moz-display: flex
-    -webkit-display: flex
-    align-items: center
-    align-content: center    
+    -ms-display       : flex
+    -moz-display      : flex
+    -webkit-display   : flex
+    grid-column       : 2
+    align-content     : center    
+    align-items       : center
+    padding           : 5em
+    overflow          : hidden
     
 .leftSide-grid-sct5
-    overflow: hidden
+    position        : relative
+    padding         : 3em 0
+    overflow        : hidden
     background-color: $sct-3-middleGrid-color
-    position: relative
-    padding: 3em 0
+    
+    
+/* set the width and center for elements  ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
     
 .container-leftSide-1
-    width: 70%
+    width : 70%
     height: 100%
     margin: 0 auto
     
 .container-leftSide2
-    width: 20em
-    margin: 0 auto
-    margin-top: 195px
+    width        : 20em
+    margin       : 0 auto
+    margin-top   : 195px
     margin-bottom: 195px 
     
 .container-rightSide-1
-    width: 75%
-    margin: 0 auto
-    padding: 7em 0
+    width     : 75%
+    margin    : 0 auto
+    padding   : 7em 0
     text-align: center
     
 .container-leftSide4
-    width: 20em
-    margin: 0 auto
-    margin-top: 195px
+    width        : 20em
+    margin       : 0 auto
+    margin-top   : 195px
     margin-bottom: 195px
-    text-align: right  
+    text-align   : right  
     
 .container-middleSide2
-    width: 33em
-    /* height: 100px */
-    margin: 0 auto
-    overflow: hidden
+    width     : 33em
+    margin    : 0 auto
+    overflow  : hidden
     text-align: left
     
 .container-topSide2
-    width: 25em
-    /* height: 100px */
-    margin: 0 auto
-    text-align: left
-    margin-top: 2em
+    width        : 25em
+    margin       : 0 auto
+    margin-top   : 2em
     margin-bottom: 2em    
+    text-align   : left
 
 .container-bottomSide2-image
-    width: 15em
-    margin: 0 auto    
-    margin-top: 40px
+    width        : 15em
+    margin       : 0 auto    
+    margin-top   : 40px
     margin-bottom: 40px
-    text-align: left 
+    text-align   : left 
     
 .container-leftSide3
-    width: 12em
-    /* height: 100px */
-    margin: 0 auto
+    width     : 12em
+    margin    : 0 auto
     margin-top: 15px
-    /* right: 30px */
     text-align: left
     
 .container-middleSide3
-    width: 50%
-    /* height: 100px */
-    margin: 0 auto
-    padding: 2em
+    width     : 50%
+    margin    : 0 auto
+    padding   : 2em
+    z-index   : 12
     text-align: left
-    z-index: 12
     
 .container-RightSide3
-    width: 21em
-    margin: 0 auto
+    width     : 21em
+    margin    : 0 auto
+    padding   : 2em 0
+    overflow  : hidden
     text-align: left
-    padding: 2em 0
-    overflow: hidden
     
 .container-rightSide4
-    width: 75%
-    padding: 4em 0
-    margin: 0 auto
+    width     : 75%
+    padding   : 4em 0
+    margin    : 0 auto
     text-align: left
     
 .container-Side5
-    width: 85%
-    /* height: 100px */
-    margin: 0 auto
-    text-align: left
-    overflow: hidden
-    display: grid
+    display              : grid
     grid-template-columns: 30% 70%
+    width                : 85%
+    margin               : 0 auto
+    overflow             : hidden
+    text-align           : left
     
 .container-rightSide6
-    width: 100%
+    width : 100%
     margin: 0 auto
     
 .left-side-use
-    float: left
+    float     : left
     margin-top: 30px
 
 .right-side-use
-    float: right
-    width: 60%
-    margin-top: 20px  
+    width     : 60%
+    float     : right
+    margin-top: 20px
     
+
+/* menu nav ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
 .menuNav
-    visibility: hidden
-    position: absolute
-    top: 0
-    right: 11em
-    z-index: 1
-    background-color: #ebb240
-    width: 40em
-    opacity: 0
-    transition: all .2s ease-out     
+    width             : 40em
+    position          : absolute
+    top               : 0
+    right             : 11em
+    visibility        : hidden
+    opacity           : 0
+    transition        : all .2s ease-out
+    -webkit-transition: .2s all ease-out
+    -moz-transition   : .2s all ease-out
+    -ms-transition    : .2s all ease-out
+    -o-transition     : .2s all ease-out        
+    z-index           : 1
+    background-color  : #ebb240
     
     .itemMenu
         ul
-            overflow: hidden
+            overflow  : hidden
             list-style: none
             a
-                display: inline-block
+                display        : inline-block
                 text-decoration: none
                 li
-                    padding: 36.5px
-                    color: $btn-menu-main-color
-                    font-family: $text-font-Roboto-Condensed-Regular
+                    padding       : 36.5px
+                    color         : $btn-menu-main-color
+                    font-family   : $text-font-Roboto-Condensed-Regular
                     text-transform: uppercase
     
 .toggleStyle
-    opacity: 1
-    width: 45em
-    transition: all .2s ease-out     
-    visibility: visible
+    opacity           : 1
+    width             : 45em
+    visibility        : visible
+    transition        : all .2s ease-out
+    -webkit-transition: .2s all ease-out
+    -moz-transition   : .2s all ease-out
+    -ms-transition    : .2s all ease-out
+    -o-transition     : .2s all ease-out      
     
 .changeBack
     background-color: $sct-2-leftGrid-color
-    border: 2px solid $sct-2-leftGrid-color !important
+    border          : 2px solid $sct-2-leftGrid-color !important
     
 .top-sideUse
     position: relative
-    top: -4em
+    top     : -4em
     .menuBar
-        display: inline-block
-        border: 2px solid #e9eae2
-        margin: 0 auto
-        color: $btn-menu-main-color
-        outline: none
+        display        : inline-block
+        border         : 2px solid #e9eae2
+        margin         : 0 auto
+        color          : $btn-menu-main-color
+        outline        : none
         text-decoration: none
         .humburger 
-            padding: 45px
+            padding : 45px
             position: relative
-            margin: 0 auto
-            cursor: pointer
-            z-index: 1
+            margin  : 0 auto
+            cursor  : pointer
+            z-index : 1
         .l1, .l2, .l3 
-            position: absolute
-            display: block
-            margin: auto
-            top: 48%
-            left: 25%
-            height: 3px
-            width: 50%
-            background-color: $btn-menu-main-color
-            transition: all .2s ease-out
-            border-radius: 8px
+            position          : absolute
+            display           : block
+            margin            : auto
+            top               : 48%
+            left              : 25%
+            height            : 3px
+            width             : 50%
+            background-color  : $btn-menu-main-color
+            transition        : all .2s ease-out
+            -webkit-transition: .2s all ease-out
+            -moz-transition   : .2s all ease-out
+            -ms-transition    : .2s all ease-out
+            -o-transition     : .2s all ease-out                
+            border-radius     : 8px
             &:first-child
                 top: 40%
             &:last-child
@@ -450,75 +466,76 @@ a
         .activate
             .l1
                 transform: rotate(45deg)
-                top: 48%
+                top      : 48%
             .l2
                 opacity: 0
             .l3
                 transform: rotate(-45deg)
-                top: 48%                        
+                top      : 48%
+                
 .bottom-sideUse
     position: relative
-    top: -2em
+    top     : -2em
     
     .desc
         text-align: left
         ul
             list-style: none
             li
-                color: $btn-menu-main-color
+                color      : $btn-menu-main-color
                 font-family: $text-font-Roboto-Condensed-Regular
-                font-size: 15px
+                font-size  : 15px
                 line-height: 15px
-                cursor: default         
+                cursor     : default         
                 
 .sideUse-sct2
-    display: inline-block
+    display : inline-block
     position: relative
-    top: -2em
-    left: 4em    
+    top     : -2em
+    left    : 4em    
     .link
-        display: inline-block
+        display   : inline-block
         text-align: left
         ul
             list-style: none
             a
                 text-decoration: none
-                color: $btn-menu-main-color
-                position: relative
+                color          : $btn-menu-main-color
+                position       : relative
                 &:hover
                     color: $btn-list-sct2-hover
                     &:before
                         opacity: 1
-                        color: #fff
+                        color  : #fff
                 &:before
-                    content: '>'
+                    content : '>'
                     position: absolute
-                    right: 5px
-                    top: -5px
-                    opacity: 0
+                    right   : 5px
+                    top     : -5px
+                    opacity : 0
             li
-                font-family: $text-font-Roboto-Condensed-Regular
-                font-size: 14px
-                line-height: 16px
+                font-family   : $text-font-Roboto-Condensed-Regular
+                font-size     : 14px
+                line-height   : 16px
                 text-transform: uppercase
-                font-weight: 500
+                font-weight   : 500
     
 .titleUse-sct2
-    display: inline-block
+    display : inline-block
     position: relative
-    top: 4em
-    left: 3em
+    top     : 4em
+    left    : 3em
     .title
         span
-            display: block
-            font-family: $text-font-Roboto-Condensed-Regular
-            font-size: 3em
+            display       : block
+            font-family   : $text-font-Roboto-Condensed-Regular
+            font-size     : 3em
             letter-spacing: 2px
-            font-weight: 500
-            color: $btn-menu-main-color
+            font-weight   : 500
+            color         : $btn-menu-main-color
             text-transform: uppercase
-            padding-top: 20px
-            cursor: default
+            padding-top   : 20px
+            cursor        : default
             
 .middleSideUse-sct2
     .descMiddle
@@ -1174,9 +1191,14 @@ a
                     color: $color-carousel-active
                     font-size: 18px
                     padding: 0 10px
-                
+                    
+                    
+/* set the position on default to show the map */              
+                    
 #map
     position: static !important
+    
+
     
 .sideUse-sct6
     .leftSide-desc
@@ -1277,7 +1299,10 @@ a
                     li
                         padding: 21px
                         
-    
+                        
+                        
+/*   Starting media Queries : Responsive Design */
+
 @media screen and (max-width: 856px)
     .rightSideUse-sct4 .descLeft , .rightSideUse-sct4 .descRight
         float: none
@@ -1309,7 +1334,10 @@ a
         width: 100%
     .container-rightSide-1
         padding: 0
+
         
+/*   Starting media Queries : Responsive Design */
+
 @media screen and (max-width: 425px)
     .menuNav
         position: absolute
@@ -1398,6 +1426,8 @@ a
     #sct-6
         display: block
         
+        
+/*   Starting media Queries : Responsive Design */
         
 @media screen and (max-width: 370px)
     .middleSideUse-sct2
@@ -1498,15 +1528,4 @@ a
         padding-top: 2em
         .linkSocialbottom
             .social
-                left: 4em
-                
-                
-        
-                
-                
-                
-                
-                
-                
-                
-                
+                left: 4em     
